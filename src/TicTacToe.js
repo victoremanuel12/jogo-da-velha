@@ -36,9 +36,9 @@ export default function TicTacToe() {
 
       
     })
-    checkDraw()
   }
-  const checkDraw = () =>{
+  checkDraw()
+  function  checkDraw (){
     if(board.every(cell => cell !== "")) return setWiner("E")
     
   }

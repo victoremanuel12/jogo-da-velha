@@ -9,4 +9,3 @@ root.render(
     <TicTacToe />
   </React.StrictMode>
 );
-
