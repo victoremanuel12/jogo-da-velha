@@ -24,7 +24,8 @@ body{
 }
 .board{
     grid-gap:1em;
-    display:grid;gap:1em;
+    display:grid;
+    gap:1em;
     grid-template-columns:repeat(3,180px);
     grid-template-rows:repeat(3,180px)
 }
@@ -36,7 +37,7 @@ body{
     display:grid;
     font-size:3em;
     font-weight:700;
-
+    border-radius: 5px;
     justify-content:center
 }
 .cell:not(.O):not(.X):hover{
@@ -84,4 +85,19 @@ footer{
     padding:.8rem 1.5rem
 }
 
-
+@media screen and  (max-width:767px) {
+    .title{
+        font-size:2em;
+    }
+    .board{
+        justify-content: center;
+        gap:0.5em;
+        grid-template-columns:repeat(3,80px);
+        grid-template-rows:repeat(3,80px)
+    }
+    .cell{
+ 
+        font-size:2em;
+    
+    }
+}

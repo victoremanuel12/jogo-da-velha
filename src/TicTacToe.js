@@ -10,8 +10,8 @@ export default function TicTacToe() {
 
 
   const handleCellClick = (indicie) => {
-    if(board[indicie] !== "")return alert("Posição já ocupada")
-    if(winner)return alert("Jogo finalizado!")
+    if(board[indicie] !== "")return null
+    if(winner)return null
     
     setBoard(board.map((item,index) => index === indicie ? currentPlayer : item ))
     setCurrentPlayer(currentPlayer === "X" ?  "O" : "X")
@@ -36,8 +36,9 @@ export default function TicTacToe() {
 
       
     })
+    checkDraw()
   }
-  checkDraw()
+ 
   function  checkDraw (){
     if(board.every(cell => cell !== "")) return setWiner("E")
     
